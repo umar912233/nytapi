@@ -17,7 +17,7 @@ export class AppComponent {
   constructor(private dataService: DataService) { }
   // tslint:disable-next-line:use-lifecycle-interface
   ngOnInit() {
-    this.dataService.sendGetRequest().subscribe((data: any[]) => {
+    this.dataService.sendGetRequest().subscribe((data) => {
       console.log(data.response.docs);
       this.products = data.response.docs;
     });
